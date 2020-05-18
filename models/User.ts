@@ -34,7 +34,7 @@ export class User {
   }
 
   fetch(): void {
-    axios.get(`http://localhost:3000/user/${this.get("id")}`).then((res: AxiosResponse) => {
+    axios.get(`http://localhost:3000/users/${this.get("id")}`).then((res: AxiosResponse) => {
       this.set(res.data);
     });
   }
