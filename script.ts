@@ -24,9 +24,17 @@ user1.trigger("click");
 user1.trigger("change");
 user1.trigger("noname");
 
+// fetch test
 const user2 = new User({ id: 1 });
 user2.fetch();
-
 setTimeout(() => {
   console.log(user2);
 }, 1000);
+
+// save put test
+user2.set({ name: "modify name", age: 30 });
+user2.save();
+
+// save post test
+const user3 = new User({ name: "new record", age: 100 });
+user3.save();
