@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "run-p start:*",
+    "start:db": "json-server -w db.json",
+    "start:parcel": "parcel index.html"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,12 @@
   },
   "homepage": "https://github.com/ryosuke-11/typescript_build-web-framework#readme",
   "devDependencies": {
+    "npm-run-all": "^4.1.5",
     "parcel-bundler": "^1.12.4",
     "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "json-server": "^0.16.1"
   }
 }
